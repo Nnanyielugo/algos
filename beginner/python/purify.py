@@ -11,3 +11,4 @@ def purify(numbers):
     if num % 2 == 0:
       result.append(num)
   return result
+  

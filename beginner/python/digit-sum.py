@@ -12,3 +12,4 @@ def digit_sum(n):
     num_str = int(str_r)
     total += num_str
   return total
+  

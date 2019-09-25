@@ -24,3 +24,4 @@ def censor(text, word):
       result.append(word_chars)
       
   return ' '.join(result)
+  

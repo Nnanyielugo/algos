@@ -17,3 +17,4 @@ def count(sequence, item):
     if char == item:
       times += 1
   return times
+  

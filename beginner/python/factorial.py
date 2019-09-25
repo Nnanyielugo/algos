@@ -12,3 +12,4 @@ def factorial(x):
     total *= x
     x -= 1
   return total
+  
