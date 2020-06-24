@@ -26,10 +26,7 @@ def fib_recursive_naive(n):
     return n
   return fib_recursive_naive(n - 1) + fib_recursive_naive(n - 2)
 
-function_calls = 0
 def fib_recursive_memo(n, cache):
-  global function_calls
-  function_calls += 1
   if n < 2:
     return n
   if cache.get(n):
@@ -39,4 +36,3 @@ def fib_recursive_memo(n, cache):
     return cache[n]
 
 print(fib_recursive_memo(10, {}))
-print("function calls", function_calls)
