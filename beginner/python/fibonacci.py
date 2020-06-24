@@ -21,4 +21,22 @@ def fib_loop_multiple_assign(n):
     n -= 1
   return a
 
-print(fib_loop_multiple_assign(10))
+def fib_recursive_naive(n):
+  if n < 2:
+    return n
+  return fib_recursive_naive(n - 1) + fib_recursive_naive(n - 2)
+
+function_calls = 0
+def fib_recursive_memo(n, cache):
+  global function_calls
+  function_calls += 1
+  if n < 2:
+    return n
+  if cache.get(n):
+    return cache.get(n)
+  else:
+    cache[n] = fib_recursive_memo(n - 1, cache) + fib_recursive_memo(n - 2, cache)
+    return cache[n]
+
+print(fib_recursive_memo(10, {}))
+print("function calls", function_calls)
