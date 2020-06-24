@@ -1,3 +1,10 @@
+/*
+  Write a JavaScript program to get the first n Fibonacci numbers. 
+  Note: The Fibonacci Sequence is the series of numbers: 
+    0, 1, 1, 2, 3, 5, 8, 13, 21, 34, . . . 
+  Each subsequent number is the sum of the previous two
+*/
+
 function fib_loop(n){
   let a = 0;
   let b = 1;
@@ -16,11 +23,8 @@ function fib_rcursive_naive(n) {
   return fib_rcursive_naive(n - 1) + fib_rcursive_naive(n - 2)
 }
 
-let function_calls = 0
 function fib_recursive_memo(n, cache) {
-  function_calls ++
   if (n < 2) return n
   return (cache[n] || (cache[n] = (fib_recursive_memo(n -1, cache) + fib_recursive_memo(n - 2, cache))))
 }
 console.log(fib_recursive_memo(10, {}))
-console.log('function calls', function_calls)
