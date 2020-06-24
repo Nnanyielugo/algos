@@ -8,7 +8,7 @@
   Do not modify the list you take as input! Instead, return a new list.
 """
 
-def remove_duplicates(nums):
+def dedupe(nums):
   result = []
   for num in nums:
     if num not in result:
