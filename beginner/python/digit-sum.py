@@ -6,10 +6,9 @@
 
 def digit_sum(n):
   total = 0
-  # create a string copy of the parameter
-  copy_n = str(n)
-  for str_r in copy_n:
-    num_str = int(str_r)
-    total += num_str
+  str_num = str(n)
+  for char in str_num:
+    int_char = int(char)
+    total += int_char
   return total
   

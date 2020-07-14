@@ -8,7 +8,7 @@
   Do not modify the list you take as input! Instead, return a new list.
  */
 
-function remove_duplicates(nums) {
+function dedupe(nums) {
   const result = [];
   for (let num of nums) {
     if (result.indexOf(num) === -1) {
