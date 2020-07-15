@@ -4,6 +4,7 @@ Algorithms in multiple languages
 #### languages:
 - [x] javascript
 - [x] python
+- [ ] typescript
 
 #### stages:
  - [x] beginner (in progress)
@@ -13,3 +14,4 @@ Algorithms in multiple languages
 #### todo:
 - [ ] test javascript
 - [ ] test python
+- [ ] beginner typescript
