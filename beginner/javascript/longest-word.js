@@ -11,4 +11,4 @@ function longestWord(sentence) {
   }, [])
 }
 
-console.log(longestWord('Walking talking having breakfast at tiffany\'s '))
+console.log(longestWord('Walking talking having breakfast at tiffany\'s'))
