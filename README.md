@@ -5,7 +5,6 @@ Algorithms in multiple languages
 - [x] javascript
 - [x] python
 - [ ] typescript
-- [ ] bash
 
 #### stages:
  - [x] beginner (in progress)
@@ -16,4 +15,3 @@ Algorithms in multiple languages
 - [ ] test javascript
 - [ ] test python
 - [ ] beginner typescript
-- [ ] bash (where possible)
