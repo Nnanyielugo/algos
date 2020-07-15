@@ -19,7 +19,7 @@ function falsyBouncer(values) {
 
 function falsyBouncerWReduce(values) {
   return values.reduce((acc, curr) => {
-    if (curr) {
+    if (!!curr) { // can just use if (curr), but i prefer explicit boolean coercions on this one
       acc.push(curr)
     }
     return acc
