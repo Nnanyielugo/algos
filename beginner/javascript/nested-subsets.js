@@ -2,7 +2,7 @@
 function checkNestedSubsets(list1, list2) {
   let tempList2 = [...list2]
   let count = 0;
-  for (let list1Arr of list1) { // loop in the reverse direction of the spicing
+  for (let list1Arr of list1) {
     for (let list2Arr of tempList2) {
       let bool = list2Arr.every(num => {
         let equalLengths = list1Arr.length === list2Arr.length;
