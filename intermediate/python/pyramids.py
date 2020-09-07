@@ -3,8 +3,9 @@ from math import floor
 def pyramid(n):
   for row in range(n):
     level = ''
-    for col in range(n * 2 - 1):
-      midpoint = floor((n * 2 - 1)/2)
+    col_count = n * 2 - 1
+    for col in range(col_count):
+      midpoint = floor(col_count /2)
       pyramid_range = (midpoint + row >= col) and (midpoint - row <= col)
       if pyramid_range:
         level += '#'
