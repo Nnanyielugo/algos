@@ -4,7 +4,7 @@ function pyramids(n) {
   for (let row = 0; row < n; row++) {
     let level = '';
     for (let col = 0; col < colCount; col++) {
-      let range = (midpoint + row >= col) &&  (midpoint - row <= col);
+      let range = (midpoint - row >= col) &&  (midpoint + row <= col);
       if (range) {
         level += '#';
       } else {

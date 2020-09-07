@@ -6,7 +6,7 @@ def pyramid(n):
   for row in range(n):
     level = ''
     for col in range(col_count):
-      pyramid_range = (midpoint + row >= col) and (midpoint - row <= col)
+      pyramid_range = (midpoint - row >= col) and (midpoint + row <= col)
       if pyramid_range:
         level += '#'
       else:
