@@ -15,10 +15,10 @@ function pyramid(n) {
   }
 }
 
-function pyramidRecursive(n, row = 0, col = 0, level = '') {
+function pyramidRecursive(n, row = 0, level = '') {
   const colCount = n * 2 - 1;
   const midpoint = Math.floor(colCount / 2);
-  const pyramidRange = (midpoint - row <= col) && (midpoint + row >= col);
+  const pyramidRange = (midpoint - row <= level.length) && (midpoint + row >= level.length);
   if (row === n) {
     return;
   }
@@ -33,7 +33,7 @@ function pyramidRecursive(n, row = 0, col = 0, level = '') {
   } else {
     level += ' '
   }
-  return pyramidRecursive(n, row, col + 1, level)
+  return pyramidRecursive(n, row, level)
 }
 
 pyramidRecursive(9)

@@ -13,14 +13,15 @@ def pyramid(n):
         level += ' '
     print(level)
 
-def pyramidRecursive(n, row = 0, col = 0, level = ''):
+def pyramidRecursive(n, row = 0, level = ''):
   colCount = n * 2 - 1
   midpoint = floor(colCount / 2)
-  pyramid_range = (midpoint - row <= col) and (midpoint + row >= col)
+  level_length = len(level)
+  pyramid_range = (midpoint - row <= level_length) and (midpoint + row >= level_length)
 
   if row == n: return
 
-  if len(level) == colCount:
+  if level_length == colCount:
     print(level)
     return pyramidRecursive(n, row + 1)
 
@@ -28,6 +29,6 @@ def pyramidRecursive(n, row = 0, col = 0, level = ''):
     level += '#'
   else: level += ' '
 
-  return pyramidRecursive(n, row, col + 1, level)
+  return pyramidRecursive(n, row, level)
 
 pyramidRecursive(9)
