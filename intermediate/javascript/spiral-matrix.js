@@ -1,4 +1,4 @@
-function matrix(n) {
+function spiral_matrix(n) {
   const result = [];
   // create n numbber of arrays in result
   for (let _ = 0; _ < n; _++) {
@@ -45,5 +45,5 @@ function matrix(n) {
   return result;
 }
 
-const mat = matrix(3)
+const mat = spiral_matrix(3)
 mat.forEach(m => console.log(m))
