@@ -1,6 +1,6 @@
 def spiral_matrix(n):
   # create n number of empty arrays in result
-  # fill with n number of Nones, to replicate
+  # fill with n number of Nones, to mimic
   # the js method of assigning to arbitrary spaces in array and
   # circumvent "out of bounds assignment" range error
   result = []
