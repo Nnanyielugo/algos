@@ -1,4 +1,4 @@
-// Given a list of lists, write a Python program to find the list with maximum length. The output should be in the form (list, list_length).
+// Given a list of lists, write a program to find the list with maximum length. The output should be in the form (list, list_length).
 function maxLengthSublist(list) {
   let maxSubList = list.reduce((acc, curr) => {
     if (acc.length > curr.length) {
