@@ -7,9 +7,8 @@ Algorithms in multiple languages
 - [ ] typescript
 
 #### stages:
- - [x] beginner (in progress)
- - [ ] intermediate
- - [ ] advanced
+ - [x] beginner
+ - [ ] advanced (in progress)
  
 #### todo:
 - [ ] test javascript
