@@ -40,6 +40,6 @@ def spiral_matrix(n):
 
   return result
 
-mat = spiral_matrix(3)
+mat = spiral_matrix(4)
 for m in mat:
   print(m)
