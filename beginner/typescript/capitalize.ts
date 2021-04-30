@@ -1,7 +1,6 @@
-function capitalize(str) {
-  const strArr = str.split(" ");
-  const result = [];
-  for (let _str of strArr) {
+function capitalize(str: string): string {
+  const result: string[] = [];
+  for (let _str of str.split(" ")) {
     const modified_string = _str[0].toUpperCase().concat(_str.slice(1));
     result.push(modified_string);
   }

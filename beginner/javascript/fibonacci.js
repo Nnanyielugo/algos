@@ -24,7 +24,10 @@ function fib_rcursive_naive(n) {
 }
 
 function fib_recursive_memo(n, cache) {
-  if (n < 2) return n
-  return (cache[n] || (cache[n] = (fib_recursive_memo(n -1, cache) + fib_recursive_memo(n - 2, cache))))
+  if (n < 2) return n;
+  if (cache[n]) {
+    return cache[n];
+  }
+  return cache[n] = fib_recursive_memo(n-1, cache) + fib_recursive_memo(n-2, cache)
 }
 console.log(fib_recursive_memo(10, {}))

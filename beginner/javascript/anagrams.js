@@ -1,43 +1,49 @@
-function isAnagram (word1, word2) {
-  if (word1.length !== word2.length) {
-    return false
-  }
+// function createCharMap(string) {
+//   const charMap = {}
+//   for (let char of string) {
+//     if (!charMap[char]) {
+//       charMap[char] = 0
+//     }
+//     charMap[char]++
+//   }
+//   return charMap
+// }
 
-  const word1Rearr = word1.split('').sort().join('').toLowerCase()
-  const word2Rearr = word2.split('').sort().join('').toLowerCase()
-  return word1Rearr === word2Rearr
+// function anagrams(stringA, stringB) {
+//   const cleanedStringA = stringA.replace(/\W/g, '').toLowerCase()
+//   const cleanedStringB = stringB.replace(/\W/g, '').toLowerCase()
+//   if (cleanedStringA.length !== cleanedStringB.length) {
+//     return false; // alternatively you can just compare charMap keys in the 'for' loop below
+//   }
+
+//   const stringACharMap = createCharMap(cleanedStringA)
+//   const stringBCharMap = createCharMap(cleanedStringB)
+
+//   for (let char in stringACharMap) {
+//     if (stringACharMap[char] !== stringBCharMap[char]) {
+//       return false
+//     }
+//   }
+//   return true
+// }
+
+// naive
+function anagrams(stringA, stringB) {
+  const cleanedA = cleanAndSortString(stringA);
+  const cleanedB = cleanAndSortString(stringB);
+  return cleanedA === cleanedB;
 }
 
-function isAnagramWCharMap(word1, word2) {
-  if (word1.length !== word2.length) {
-    return false
-  }
-
-  function createCharMap (text) {
-    const charMap = {};
-    for(let char of text) {
-      if (!charMap[char]) {
-        charMap[char] = 1;
-      } else {
-        charMap[char]++
-      }
-      
-    }
-    return charMap
-  }
-
-  const word1CharMap = createCharMap(word1);
-  const word2CharMap = createCharMap(word2)
-
-  for(let char in word1CharMap) {
-    if (word1CharMap[char] !== word2CharMap[char]) {
-      return false
-    }
-  }
-  return true
+function cleanAndSortString(str) {
+  return str
+    .replace(/\W/g, '')
+    .toLowerCase()
+    .split('')
+    .sort()
+    .join('');
 }
 
-console.log(isAnagramWCharMap('silent', 'listen'))
-console.log(isAnagramWCharMap('two', 'far'))
-console.log(isAnagramWCharMap('tell', 'sell'))
-console.log(isAnagramWCharMap('seen', 'needless'))
+console.log(anagrams('silent', 'listen'))
+console.log(anagrams('two', 'far'))
+console.log(anagrams('tell', 'sell'))
+console.log(anagrams('seen', 'needless'))
