@@ -13,4 +13,3 @@ Algorithms in multiple languages
 #### todo:
 - [ ] test javascript
 - [ ] test python
-- [ ] beginner typescript
