@@ -4,7 +4,7 @@ Algorithms in multiple languages
 #### languages:
 - [x] javascript
 - [x] python
-- [ ] typescript
+- [x] typescript
 
 #### stages:
  - [x] beginner
