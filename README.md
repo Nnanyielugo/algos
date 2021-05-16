@@ -5,6 +5,7 @@ Algorithms in multiple languages
 - [x] javascript
 - [x] python
 - [x] typescript
+- [ ] golang
 
 #### stages:
  - [x] beginner
