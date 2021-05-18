@@ -22,6 +22,9 @@ function harmlessRansomNote(noteText, magazineText) {
 
   for (let word in wordMap) {
     const wordCount = wordMap[word];
+    if (!magazineMap[word]) {
+      return false;
+    }
     if (magazineMap[word] < wordCount) {
       return false;
     }
@@ -29,10 +32,11 @@ function harmlessRansomNote(noteText, magazineText) {
   return true;
 }
 
-let note1 = 'this is a secret note for you from a secret admirier';
-let note2 = 'this is a note for you from a secret admirier';
+const note1 = 'this is a secret note for you from a secret admirier';
+const note2 = 'this is a note for you from a secret admirier';
+const note3 = 'temptation this temptation that';
 
-let magazine =
+const magazine =
   'puerto rico is a great place you must hike far from town to find a secret waterfall that i am an admirier of but note that it is not as hard as it seems this is my advice for you';
 
 console.log(harmlessRansomNote(note2, magazine));
