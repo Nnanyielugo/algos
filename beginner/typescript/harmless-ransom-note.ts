@@ -27,6 +27,9 @@ function harmlessRansomNote(noteText: string, magazineText: string): boolean {
 
   for (let word in noteMap) {
     let noteWordCount = noteMap[word];
+    if (!magazineMap[word]) {
+      return false;
+    }
     if (magazineMap[word] < noteWordCount) {
       return false;
     }
