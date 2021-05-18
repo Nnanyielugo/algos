@@ -7,7 +7,7 @@
   Given an array, remove all falsy values from the array and return an array of only truthy values.
  */
 
-function falsyBouncer(values: any[]) {
+function falsyBouncer(values: any[]): any[] {
   return values.reduce((acc: any[], curr: any) => {
     if (curr) {
       acc.push(curr);
