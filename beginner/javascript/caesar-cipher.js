@@ -8,7 +8,7 @@ function caesarCipher(str, num) {
   const lowerStr = str.toLowerCase();
   let output = '';
 
-  for (let char of str) {
+  for (let char of lowerStr) {
     if (char === ' ') {
       output += char;
       continue;
