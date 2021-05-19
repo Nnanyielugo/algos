@@ -5,6 +5,9 @@
 
 function caesarCipher(str, num) {
   const alphabets = 'abcdefghijklmnopqrstuvwxyz';
+  // cover edge case where num is greater than the length of the alphabets
+  num = num % alphabets.length;
+
   const lowerStr = str.toLowerCase();
   let output = '';
 
@@ -39,5 +42,5 @@ function caesarCipher(str, num) {
   return output;
 }
 
-console.log(caesarCipher('Zoo keeper', 9));
-console.log(caesarCipher('app developer', -2));
+console.log(caesarCipher('Zoo keeper', 90));
+console.log(caesarCipher('app developer', -27));

@@ -5,6 +5,9 @@
 
 function caesarCipher(str: string, num: number): string {
   const alphabets = 'abcdefghijklmnopqrstuvwxyz';
+  // cover edge case where num is greater than the length of the alphabets
+  num = num % alphabets.length;
+
   const lowerStr = str.toLowerCase();
   let output = '';
 

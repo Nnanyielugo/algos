@@ -7,6 +7,9 @@
 
 def caesar_cipher(str, num):
   alphabets = 'abcdefghijklmnopqrstuvwxyz'
+  # cover edge case where num is greater than the length of the alphabets
+  num = num % len(alphabets)
+
   lower_str = str.lower()
   output = ''
   for char in lower_str:
@@ -34,5 +37,5 @@ def caesar_cipher(str, num):
   
   return output
 
-print(caesar_cipher('Zoo keeper', 2))
-print(caesar_cipher('app developer', -2))
+print(caesar_cipher('Zoo keeper', 90))
+print(caesar_cipher('app developer', -27))
