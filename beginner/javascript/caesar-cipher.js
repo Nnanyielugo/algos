@@ -25,12 +25,19 @@ function caesarCipher(str, num) {
       destinationIndex = alphabets.length + destinationIndex;
     }
 
-    const destinationChar = alphabets[destinationIndex];
+    let destinationChar = alphabets[destinationIndex];
+
+    // case: return uppercase letters to their original cases
+    const originalChar = str[lowerStr.indexOf(char)];
+    if (originalChar === char.toUpperCase()) {
+      destinationChar = alphabets[destinationIndex].toUpperCase();
+    }
+
     output += destinationChar;
   }
 
   return output;
 }
 
-console.log(caesarCipher('zoo keeper', 9));
+console.log(caesarCipher('Zoo keeper', 9));
 console.log(caesarCipher('app developer', -2));

@@ -25,9 +25,14 @@ def caesar_cipher(str, num):
       destination_index = len(alphabets) + destination_index
     
     destination_char = alphabets[destination_index]
+
+    # case: return uppercase letters to their original cases
+    original_char = str[lower_str.index(char)]
+    if original_char.isupper():
+      destination_char = alphabets[destination_index].upper()
     output += destination_char
   
   return output
 
-print(caesar_cipher('zoo keeper', 2))
+print(caesar_cipher('Zoo keeper', 2))
 print(caesar_cipher('app developer', -2))
