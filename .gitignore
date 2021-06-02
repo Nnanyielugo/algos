@@ -1,3 +1,4 @@
 **/.DS_Store
 # match js files in typescript dirs and subdirs
 **/typescript/*.js
+.vscode/
