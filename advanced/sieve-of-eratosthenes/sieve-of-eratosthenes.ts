@@ -1,28 +1,25 @@
 function sieveOfEratosthenes(n: number): number[] {
-  // make an array from 0 to an,
-  // and make each element of that array the value true
-  const primes: boolean[] = [];
+  // use int8 arrays to create and initialize array with values of 0
+  const primes = new Int8Array(n);
   const result: number[] = [];
 
-  for (let i = 0; i <= n; i++) {
-    primes[i] = true;
-  }
-  primes[0] = false;
-  primes[1] = false;
+  primes[0] = 1;
+  primes[1] = 1;
 
   // loop through the square roots of n
   for (let i = 2; i <= Math.sqrt(n); i++) {
-    // console.log(i);
-    // loop through the multiples of i
-    for (let j = 2; j * i <= n; j++) {
-      const multiplesOfI = i * j;
-      // mark all multiples of i as false
-      primes[multiplesOfI] = false;
+    // only make inner loop if number isn't marked as prime
+    if (primes[i] === 0) {
+      const multiplesOfI = i * i;
+      // loop through the multiples of i
+      for (let j = multiplesOfI; j <= n; j += i) {
+        // mark all multiples of i as false
+        primes[j] = 1;
+      }
     }
   }
-  console.log(primes);
   for (let i = 0; i < primes.length; i++) {
-    if (primes[i]) {
+    if (primes[i] === 0) {
       result.push(i);
     }
   }
