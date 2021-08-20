@@ -26,9 +26,9 @@ Since profit can only be gotten from one diff, we have to keep track of buying a
 - create a selling price var and initialize to zero.
 - loop through prices:
   - if current price is less than buying price:
-  - (re)calculate temporary profit before next buy.
-  - buy.
-  - reset selling to 0 because selling price cannot occur before buying.
+    - (re)calculate temporary profit before next buy.
+    - buy.
+    - reset selling to 0 because selling price cannot occur before buying.
   - if current price is greater than selling price:
     - sell.
     - update profit if new diff between selling price and buying price is greater than existing diff (profit).
