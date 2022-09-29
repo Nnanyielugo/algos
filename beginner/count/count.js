@@ -9,14 +9,12 @@
   The item you input may be an integer, string, float, or even another list!
  */
 
- function count(sequence, item) {
-   let times = 0;
+function count(sequence, item) {
+  let times = 0;
 
-   for (let char of sequence) {
-     if (char === item)
-       times ++;
-   }
+  for (let char of sequence) {
+    if (char === item) times++;
+  }
 
-   return times;
- }
- 
+  return times;
+}

@@ -8,35 +8,20 @@ function isAnagram(word1: string, word2: string): boolean {
 }
 
 interface CharMap {
-  [key: string]: number;
+  [char: string]: number;
 }
-
-function isAnagramCharMap(word1: string, word2: string): boolean {
-  if (word1.length !== word2.length) {
+function anagrams(stringA: string, stringB: string): boolean {
+  if (stringA.length !== stringB.length) {
     return false;
   }
-
-  function createCharMap(text: string): CharMap {
-    const charMap: CharMap = {};
-
-    for (let char of text) {
-      if (!charMap[char]) {
-        charMap[char] = 1;
-      } else {
-        charMap[char]++;
-      }
-    }
-
-    return charMap;
+  interface CharMap {
+    [char: string]: number;
   }
+  const charMapA: CharMap = cleanedCharaMap(stringA);
+  const charMapB: CharMap = cleanedCharaMap(stringB);
 
-  const word1CharMap = createCharMap(word1);
-  const word2CharMap = createCharMap(word2);
-
-  for (let char in word1CharMap) {
-    const word1CharCount = word1CharMap[char];
-    const word2CharCount = word2CharMap[char];
-    if (!word2CharCount || word2CharCount !== word1CharCount) {
+  for (let char in charMapA) {
+    if (charMapA[char] !== charMapB[char]) {
       return false;
     }
   }
@@ -44,6 +29,21 @@ function isAnagramCharMap(word1: string, word2: string): boolean {
   return true;
 }
 
-console.log(isAnagramCharMap('silent', 'listen'));
-console.log(isAnagramCharMap('seen', 'needless'));
-console.log(isAnagramCharMap('two', 'far'));
+console.log(anagrams('rail safety', 'fairy tales'));
+console.log(anagrams('RAIL! SAFETY!', 'fairy tales'));
+console.log(anagrams('hi there', 'bye there'));
+
+function cleanedCharaMap(str: string): CharMap {
+  const charMap: CharMap = {};
+  const isValidAlphs = /\w/;
+  for (let char of str.toLowerCase()) {
+    if (isValidAlphs.test(char)) {
+      if (!charMap[char]) {
+        charMap[char] = 0;
+      }
+      charMap[char]++;
+    }
+  }
+
+  return charMap;
+}
