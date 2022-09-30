@@ -1,6 +1,6 @@
 ### Staircase
 
-##### Question:
+#### Question:
 
 Write a program that prints a staircase of size `n` using `#` symbol and spaces
 For instance, `staircase(4)` will print:
