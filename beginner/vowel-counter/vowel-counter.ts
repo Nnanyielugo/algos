@@ -1,4 +1,4 @@
-function vowelCounter(word) {
+function vowelCounter(word: string): number {
   let vowelCount = 0;
   const vowels = 'aeiou';
 
