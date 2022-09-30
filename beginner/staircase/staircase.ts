@@ -1,38 +1,41 @@
-function staircaseIter(num: number) {
-  for (let rowInd = 0; rowInd <= num; rowInd++) {
-    let steps = '';
-    for (let colInd = 0; colInd <= num; colInd++) {
-      if (rowInd >= colInd) {
-        steps += '#';
+function staircase(n: number): void {
+  for (let row = 0; row <= n - 1; row++) {
+    let stair = '';
+    for (let col = n - 1; col >= 0; col--) {
+      if (row >= col) {
+        stair += '#';
       } else {
-        steps += ' ';
+        stair += ' ';
       }
     }
-    console.log(steps);
+    console.log(stair);
   }
 }
 
-staircaseIter(7);
-
-function staircaseRecur(
-  num: number,
-  row = 0,
-  spaces = ''
-): typeof staircaseRecur | void {
-  if (num === row) return;
-
-  if (num === spaces.length) {
-    console.log(spaces);
-    return staircaseRecur(num, row + 1);
+function staircaseRecursive(
+  n: number,
+  row: number = n,
+  stair: string = ''
+): typeof staircaseRecursive | void {
+  // exit clause
+  if (row === 0) {
+    return;
   }
 
-  if (row >= spaces.length) {
-    spaces += '#';
+  // step clause
+  if (stair.length === n) {
+    console.log(stair);
+    return staircaseRecursive(n, row - 1);
+  }
+
+  // stair concatenation clause
+  if (stair.length >= row - 1) {
+    stair += '#';
   } else {
-    spaces += ' ';
+    stair += ' ';
   }
 
-  return staircaseRecur(num, row, spaces);
+  return staircaseRecursive(n, row, stair);
 }
 
-staircaseRecur(7);
+staircaseRecursive(7);
