@@ -1,5 +1,5 @@
 function reverseInt(input: number): number {
-  const sign = Math.sign(input);
+  const sign = input > 0 ? 1 : -1; // alternatively can use Math.sign(input)
   const reversed = String(Math.abs(input)).split('').reverse().join('');
   // Math.abs(input).toString().split...
   return sign * +reversed;
