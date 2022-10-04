@@ -1,4 +1,4 @@
-function reverseArrayInPlace(arr: any[]) {
+function reverseArrayInPlace(arr: any[]): any[] {
   for (let i = 0; i < arr.length / 2; i++) {
     const temp = arr[i];
     const swapIndex = arr.length - 1 - i;
