@@ -1,18 +1,11 @@
-"""
-  Create a function that reverses the array passed in.
-  It is important that these two rules are kept:
-    1. Do not create a new array
-    2. Do not use the native array reverse method
-"""
-
 import math
 
 def reverse_array_in_place(arr):
   half_len = int(math.ceil(len(arr)/2))
   for index in range(half_len):
-    end_index = len(arr) - 1 - index
-    # dont need temp vars in python, can do multiple assignment
-    arr[index], arr[end_index] = arr[end_index], arr[index]
+    swap_index = len(arr) - 1 - index
+    # don't need temp vars in python, can do multiple assignment
+    arr[index], arr[swap_index] = arr[swap_index], arr[index]
 
   return arr
 

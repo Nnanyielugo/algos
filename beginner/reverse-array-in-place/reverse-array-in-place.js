@@ -8,9 +8,9 @@
 function reverseArrayInPlace(arr) {
   for (let i = 0; i < arr.length / 2; i++) {
     const temp = arr[i];
-    const lastIndex = arr.length - 1 - i;
-    arr[i] = arr[lastIndex];
-    arr[lastIndex] = temp;
+    const swapIndex = arr.length - 1 - i;
+    arr[i] = arr[swapIndex];
+    arr[swapIndex] = temp;
   }
   return arr;
 }
