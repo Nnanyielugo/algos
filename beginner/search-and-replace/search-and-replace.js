@@ -6,7 +6,3 @@ function searchAndReplace(sentence, target, replacement) {
   }
   return sentence;
 }
-
-console.log(
-  searchAndReplace('He is Sleeping on the couch', 'Sleeping', 'sitting')
-);
