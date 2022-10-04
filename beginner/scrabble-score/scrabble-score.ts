@@ -1,4 +1,8 @@
-const score = {
+interface Score {
+  [key: string]: number;
+}
+
+const score: Score = {
   a: 1,
   c: 3,
   b: 3,
@@ -27,7 +31,7 @@ const score = {
   z: 10,
 };
 
-function scrabble_score(word) {
+function scrabble_score(word: string): number {
   let result = 0;
 
   for (let char of word) {
