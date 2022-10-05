@@ -1,4 +1,4 @@
-function reverse(text) {
+function reverse(text: string): string {
   let result = '';
 
   for (let char of text) {
