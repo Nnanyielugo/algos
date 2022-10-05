@@ -14,5 +14,6 @@ This is a pretty straightforward problem that can be solved with the following s
 
 - create a `result` variable and set it to an empty string
 - loop over each character in the string
-- add the character to the start of the `result` string innstead of the end.
+- for each character:
+  - add the character to the start of the `result` string instead of the end.
 - return `result`
