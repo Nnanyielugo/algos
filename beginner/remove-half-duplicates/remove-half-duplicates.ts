@@ -1,5 +1,5 @@
-function removeHalfDuplicates(arr) {
-  return arr.sort().reduce((acc, curr, index) => {
+function removeHalfDuplicates(arr: number[]): number[] {
+  return arr.sort().reduce((acc: number[], curr: number, index: number) => {
     if (index % 2) {
       acc.push(curr);
     }
@@ -7,9 +7,13 @@ function removeHalfDuplicates(arr) {
   }, []);
 }
 
-function removeHalfDuplicatesKeepOrder(arr) {
-  const count = {};
-  const res = [];
+interface Count {
+  [index: number]: number;
+}
+
+function removeHalfDuplicatesKeepOrder(arr: number[]): number[] {
+  const count: Count = {};
+  const res: number[] = [];
   for (let num of arr) {
     if (count[num]) {
       count[num]++;
