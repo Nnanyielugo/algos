@@ -30,7 +30,7 @@ What we're tryinng to achieve here is to take the input array and arrange in a w
 - create a variable `even`. Initialize to 0.
 - create a variable `odd`. Initialize to 1.
 - create a loop from 0 to the length of the array (last count exclusive)
-- for each number at position 0 to input lenth (less one),
-- if the number is a even number, place the number at position `even` in `result`. Increase `even` by 2.
-- if the number is a odd number, place the number at position `odd` in `result`. Increase `odd` by 2.
+- for each number at position 0 to input lenth (less one):
+  - if the number is a even number, place the number at position `even` in `result`. Increase `even` by 2.
+  - if the number is a odd number, place the number at position `odd` in `result`. Increase `odd` by 2.
 - return `result`.
