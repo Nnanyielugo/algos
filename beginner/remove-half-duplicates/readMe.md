@@ -10,7 +10,7 @@ Since 8 occurs 4 times, it should now occur twice. Since 3 occurred twice, it sh
 
 So the new list will be something like k=[1,8,8,3]
 
-#### Question
+#### Solution
 
 We can solve this in two ways: the first and easier way involves sorting the array and looping over its items, while the second does not involve sorting.
 
