@@ -18,5 +18,6 @@ each element of array A is an integer within the range [−1,000,000..1,000,000]
 #### Solution
 
 - create a loop from 1 to infinity
-- for each number in the loop, check that the number exists in the input array.
-- if the number does not exist, return the number
+- for each number in the loop:
+  - check that the number exists in the input array.
+  - if the number does not exist, return the number
