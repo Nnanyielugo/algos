@@ -13,6 +13,7 @@ This problem can be solved in a number of straight-forward steps:
 - initialize a `count` variable and set value to 0
 - store all known vowels in a `vowels` variable
 - loop through each character in `vowels`
-- check if the character is one of the letters in `vowels`
-- if yes, increment `count` by one.
+- for each character:
+  - check if the character is one of the letters in `vowels`
+  - if yes, increment `count` by one.
 - return `count`
