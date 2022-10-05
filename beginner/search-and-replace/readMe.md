@@ -9,6 +9,8 @@ For example: `searchAndReplace("He is Sleeping on the couch", "Sleeping", "sitti
 #### Solution
 
 - convert the sentence into an array/list of words
-- loop over each `word` in the array of words. Compare word with target
-- if word matches target, replace the target word with the replacement
+- loop over each `word` in the array of words.
+- for each word:
+  - compare word with target
+  - if word matches target, replace the target word with the replacement
 - return the sentence
