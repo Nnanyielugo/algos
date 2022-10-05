@@ -17,6 +17,7 @@ We are already provided with a `score` character map that associates each letter
 
 - intialize a `result` variable and set its value to `0`
 - loop over the characters in the input word (optionally convert to lowercase to handle uppercase or mixed characters)
-- fetch the value of the character.
-- if value exists, add to `result`
+- for each character:
+  - fetch the value of the character.
+  - if value exists, add to `result`
 - return result
