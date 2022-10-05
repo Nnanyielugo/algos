@@ -21,10 +21,12 @@ Looking at the expected result, what we're trying to do here is to print a stair
 **Iteirative solution**
 
 - create a loop with var `row` from 0 to `n-1`.
-- create a variable `stair` and initialize to an empty string (no spaces)
-- create an inner loop with var `col` from `n-1` to 0.
-- if the value of `row` is greater than or equal to the value of `col`, cocatenate `#` to `stair`. Else cocatenate an empty string (with a space) to `stair`.
-- at the end off the outer loop, print `stair`
+- for each row:
+  - create a variable `stair` and initialize to an empty string (no spaces)
+  - create an inner loop with var `col` from `n-1` to 0.
+  - for each col:
+    - if the value of `row` is greater than or equal to the value of `col`, cocatenate `#` to `stair`. Else cocatenate an empty string (with a space) to `stair`.
+  - at the end off the outer loop, print `stair`
 
 **Recursion**
 This is basically `staircase` but with extra steps. Since we cannot keep variables in an outer loop like in the iteirative solution (since the recursive calls means the execution context is wiped clean), we simply pass them as arguments to each call and modify as we want.
