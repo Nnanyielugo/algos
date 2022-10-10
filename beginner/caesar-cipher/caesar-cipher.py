@@ -8,7 +8,7 @@
 def caesar_cipher(str, num):
   alphabets = 'abcdefghijklmnopqrstuvwxyz'
   # cover edge case where num is greater than the length of the alphabets
-  num = num % len(alphabets)
+  shiftingNum = num % len(alphabets)
 
   lower_str = str.lower()
   output = ''
@@ -18,7 +18,7 @@ def caesar_cipher(str, num):
       continue
 
     origin_index = alphabets.index(char)
-    destination_index = origin_index + num
+    destination_index = origin_index + shiftingNum
 
     if destination_index > (len(alphabets) - 1):
       # case: positve num where additon might be greater than alphabets index

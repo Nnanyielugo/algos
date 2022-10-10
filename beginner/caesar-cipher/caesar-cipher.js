@@ -1,12 +1,7 @@
-// write out an algorithm that shifts every letter of a given string
-// by the number that was passed in.
-// the algorithm should account for nagative numbers
-// example caesarCipher('zoo keeper', 2), should output 'bqq mggrgt'
-
 function caesarCipher(str, num) {
   const alphabets = 'abcdefghijklmnopqrstuvwxyz';
   // cover edge case where num is greater than the length of the alphabets
-  num = num % alphabets.length;
+  let shiftingNum = num % alphabets.length;
 
   const lowerStr = str.toLowerCase();
   let output = '';
@@ -18,7 +13,7 @@ function caesarCipher(str, num) {
     }
 
     const originIndex = alphabets.indexOf(char);
-    let destinationIndex = originIndex + num;
+    let destinationIndex = originIndex + shiftingNum;
 
     if (destinationIndex > alphabets.length - 1) {
       // case: positve num where additon might be greater than alphabets index
