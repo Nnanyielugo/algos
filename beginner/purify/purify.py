@@ -1,7 +1,4 @@
 def purify(numbers):
-  result = []
-  for num in numbers:
-    if num % 2 == 0:
-      result.append(num)
-  return result
+  return [num for num in numbers if num % 2 == 0]
   
+print(purify([1,2,3]))
