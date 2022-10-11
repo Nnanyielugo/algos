@@ -1,4 +1,4 @@
-### Dedupe
+### Digit Sum
 
 ##### Question:
 
