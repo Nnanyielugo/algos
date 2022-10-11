@@ -1,9 +1,3 @@
-"""
-  Define a function factorial that takes an integer x as input.
-
-  Calculate and return the factorial of that number.
-"""
-
 def factorial(x):
   total = 1
   if x == 1 or x == 0:

@@ -1,9 +1,3 @@
-/**
-  Define a function factorial that takes an integer x as input.
-
-  Calculate and return the factorial of that number.
- */
-
 function factorial(x) {
   let total = 1;
   if (x <= 1) {

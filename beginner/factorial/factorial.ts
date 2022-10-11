@@ -1,9 +1,3 @@
-/**
- Define a function factorial that takes an integer x as input.
-
-  Calculate and return the factorial of that number.
- */
-
 function factorial(x: number): number {
   let total = 1;
   if (x <= 1) {
@@ -11,6 +5,7 @@ function factorial(x: number): number {
   }
 
   for (let i = 1; i <= x; i++) {
+    console.log('to', total, i);
     total *= i;
   }
   return total;
