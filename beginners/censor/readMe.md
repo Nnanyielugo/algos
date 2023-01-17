@@ -1,4 +1,4 @@
-### Capitalize
+### Censor
 
 ##### Question:
 
