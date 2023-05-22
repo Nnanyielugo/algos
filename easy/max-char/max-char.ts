@@ -18,7 +18,7 @@ function maxChar(str: string): string {
     }
   }
 
-  return str;
+  return max;
 }
 
 console.log(maxChar('abcccccd'));
