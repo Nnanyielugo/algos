@@ -29,6 +29,7 @@ Looking at the expected result, what we're trying to do here is to print a stair
   - at the end off the outer loop, print `stair`
 
 **Recursion**
+
 This is basically `staircase` but with extra steps. Since we cannot keep variables in an outer loop like in the iteirative solution (since the recursive calls means the execution context is wiped clean), we simply pass them as arguments to each call and modify as we want.
 
 - create a function with variables `n`, `row` and `stair`. `row` should initialize as the value of `n`, and `stair` should initialize as an empty string (no spaces)
